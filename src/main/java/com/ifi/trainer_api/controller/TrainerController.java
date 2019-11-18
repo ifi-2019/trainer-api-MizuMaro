@@ -26,5 +26,10 @@ public class TrainerController {
     Trainer addTrainer(@RequestBody Trainer t){
         return trainerService.createTrainer(t);
     }
+    @DeleteMapping(value = "/{id}")
+    public void deleteTrainer(@PathVariable String id) {
+         trainerService.deleteTrainer(trainerService.getTrainer(id));
+    }
+
 
 }
