@@ -8,6 +8,12 @@ public class Trainer {
     @Id
     private String name;
 
+    @Column
+    private  String password;
+
+    @Column
+    private  String avatar;
+
     @ElementCollection
     private List<Pokemon> team;
 
@@ -26,11 +32,27 @@ public class Trainer {
         this.name = name;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public List<Pokemon> getTeam() {
         return team;
     }
 
     public void setTeam(List<Pokemon> team) {
         this.team = team;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 }
